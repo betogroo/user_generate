@@ -4,7 +4,7 @@ Api de geração de usuários para testes em desenvolvimento.
 
 ## Endpoints
 
-### GET /user-generate
+### GET /user-generate/{quantidade-de-usuarios}
 Este endpoint retorna um array de usuários, com os seguintes campos:
 
 * __key__: Número de ordem do registro, começando em 0 (zero)
@@ -14,9 +14,12 @@ Este endpoint retorna um array de usuários, com os seguintes campos:
 * __cpf__: Número que representa um CPF válido, para fins de testes e validações
 * __password__: Senha criptografada
 * __email__: Email, com o nome e sobrenome do usuário, seguido de um número aleatório e um domínio aleatório
-* __birthDate__: Data de Nascimento, no fomrmato YYYY/MM/DD
+* __birthDate__: Data de Nascimento, no fomrmato YYYY-MM-DD
 * __gender__: Sexo do usuário, no formato M ou F
 
-É aceito um parâmetro para esta rota, no formato inteiro, que representa a quantidade de registros a serem criados. Caso o parâmetro não seja informado, será retornado o valor padrão de 10 registos. Caso o valor do prâmetro seja maior que 100, serão retornados apenas 100 registros. Caso o parâmetro seja um número decimal, será considerado apenas o valor inteiro. Qualquer outro valor informado será considerado erro e serão retornados 10 registros.
+É aceito um parâmetro para esta rota, no formato inteiro, que representa a quantidade de registros a serem criados.
 
+Caso o parâmetro não seja informado, será retornado o valor padrão de 10 registos. Caso o valor do prâmetro seja maior que 100, serão retornados apenas 100 registros. Caso o parâmetro seja um número decimal, será considerado apenas o valor inteiro. Qualquer outro valor informado será considerado erro e serão retornados 10 registros.
 
+### /
+Este endpoint conte um objeto com as instruções de utilização.
