@@ -22,6 +22,7 @@ class LogController {
         amount = Math.trunc(amount)
         const data = []
             data[0] = {
+                key: 0,
                 id: 'superAdm',
                 name: 'ADMINISTRADOR DO SISTEMA',
                 rg: '000000000',
@@ -40,6 +41,7 @@ class LogController {
             var gender = people.gender
 
             data[i] = {
+                key: i,
                 id: randomID({ length: 8, type: 'url-safe' }),
                 name: name,
                 rg: rg,
