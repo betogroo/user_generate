@@ -23,7 +23,7 @@ Caso o parâmetro não seja informado, será retornado o valor padrão de 10 reg
 
 #### Exemplo:
 
-__/user-generate/5
+__/user-generate/5__
 
 ```
 {
